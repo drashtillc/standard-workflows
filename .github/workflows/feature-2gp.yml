@@ -12,15 +12,6 @@ on:
         required: true
 
 jobs:
-  feature-test:
-    name: "Feature Test"
-    runs-on: ubuntu-latest
-    steps:
-      - uses: cumulus-actions/feature-test@v1
-        with:
-          dev-hub-auth-url: '${{ secrets.dev-hub-auth-url }}'
-          cumulusci-version: '${{ inputs.cumulusci-version }}'
-          sfdx-version: '${{ inputs.sfdx-version }}'
   feature-test-2gp:
     name: "Feature Test - 2GP"
     runs-on: ubuntu-latest
