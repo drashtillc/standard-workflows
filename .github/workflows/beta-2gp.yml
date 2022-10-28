@@ -11,12 +11,12 @@ jobs:
     concurrency: packaging
     runs-on: ubuntu-latest
     steps:
-      - uses: cumulus-actions/release-beta-2gp@v1
+      - uses: cumulus-actions/release-beta-2gp@main
         with:
-          packaging-org-auth-url: '${{ secrets.dev-hub-auth-url }}'
+          dev-hub-auth-url: '${{ secrets.dev-hub-auth-url }}'
   beta-test:
     name: "Beta Test"
-    needs:
+    needs:a
       - upload-beta-release-2gp
     runs-on: ubuntu-latest
     steps: 
