@@ -16,7 +16,7 @@ jobs:
           dev-hub-auth-url: '${{ secrets.dev-hub-auth-url }}'
   beta-test:
     name: "Beta Test"
-    needs:a
+    needs:
       - upload-beta-release-2gp
     runs-on: ubuntu-latest
     steps: 
