@@ -10,10 +10,6 @@ on:
     secrets:
       dev-hub-auth-url:
         required: true
-      ssh-key: 
-        required: True
-      token:
-        required: True
 
 jobs:
   feature-test:
@@ -25,5 +21,3 @@ jobs:
           dev-hub-auth-url: '${{ secrets.dev-hub-auth-url }}'
           cumulusci-version: '${{ inputs.cumulusci-version }}'
           sfdx-version: '${{ inputs.sfdx-version }}'
-          ssh-key: '${{ secrets.ELEMENT_DEPLOY_KEY }}'
-          token: '${{ secrets.ELEMENT_TOKEN }}'
