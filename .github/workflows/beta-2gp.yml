@@ -10,6 +10,10 @@ on:
     secrets:
       dev-hub-auth-url: 
         required: True
+      ssh-key: 
+        required: True
+      token:
+        required: True
 
 jobs:
   upload-beta-release-2gp:
@@ -21,6 +25,8 @@ jobs:
       - uses: cumulus-actions/release-beta-2gp@main
         with:
           dev-hub-auth-url: '${{ secrets.dev-hub-auth-url }}'
+          ssh-key: '${{ secrets.ELEMENT_DEPLOY_KEY }}'
+          token: '${{ secrets.ELEMENT_TOKEN }}'
   beta-test:
     name: "Beta Test"
     needs:
